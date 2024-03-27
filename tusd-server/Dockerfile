@@ -1,4 +1,14 @@
 FROM tusproject/tusd:v1.8
+FROM openjdk:11
+
+ARG SOURCE
+ARG COMMIT_HASH
+ARG COMMIT_ID
+ARG BUILD_TIME
+LABEL source=${SOURCE}
+LABEL commit_hash=${COMMIT_HASH}
+LABEL commit_id=${COMMIT_ID}
+LABEL build_time=${BUILD_TIME}
 
 ARG container_user=mosip
 ARG container_user_group=mosip
